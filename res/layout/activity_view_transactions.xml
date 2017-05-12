@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/restaurant"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.gatech.seclass.prj2.ViewTransactionActivity" >
+
+    <TextView
+        android:id="@+id/ctTextViewDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:text="@string/Transactions"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ctTextViewDateLabel"
+        android:layout_centerHorizontal="true" 
+        android:fadeScrollbars="false">
+    <TableLayout
+        android:id="@+id/view_transactions_table"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/DateLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/TransactionTableDateHeader" 
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/customerNameLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/TransactionTableNameHeader" 
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <TextView
+                android:id="@+id/AmountStatusLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/TransactionTableAmountHeader" 
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <TextView
+                android:id="@+id/GoldLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/TransactionTableGoldHeader" 
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <TextView
+                android:id="@+id/RewardAppliedLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/TransactionTableRewardHeader" 
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+        </TableRow>
+        <TableRow android:id="@+id/tableRow2"></TableRow> 
+    </TableLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

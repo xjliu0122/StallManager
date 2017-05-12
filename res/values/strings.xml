@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PReMS</string>
+    <string name="title_activity_main">PReMS</string>
+    <string name="title_activity_view_transactions">PReMS</string>
+    <string name="title_activity_view_customer">PReMS</string>
+    <string name="title_activity_create_customer">PReMS</string>
+    <string name="title_activity_create_transaction">PReMS</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">PReMS</string>
+    <string name="ViewCustomer">View Customer</string>
+    <string name="FirstName">First Name</string>
+    <string name="LastName">Last Name</string>
+    <string name="Zipcode">Zipcode</string>
+    <string name="EmailAddress">Email</string>
+    <string name="RewardAmount">Reward Amount</string>
+    <string name="GoldStatus">Gold Status</string>
+    <string name="YearlyTotal">Yearly Total</string>
+    <string name="CurrentRewards">Current Rewards</string>
+    <string name="Home">Home</string>
+    <string name="ViewCustomerTransactions">View Customer Transactions</string>
+    <string name="Modify_Customer">Modify\nCustomer</string>
+    <string name="title_activity_modify_customer">PReMS</string>
+    <string name="Save">Save</string>
+    <string name="BackViewCustomer">Back To View Customer</string>
+    <string name="ModifyCustomer">Modify Customer</string>
+    <string name="NewCustomer">New Customer</string>
+    <string name="PaymentSuccess">Payment Successful</string>
+    <string name="TransactionTableDateHeader">Date</string>
+    <string name="TransactionTableNameHeader">Customer\nName</string>
+    <string name="TransactionTableAmountHeader">Total\nAmount</string>
+    <string name="TransactionTableGoldHeader">Gold\nDiscount</string>
+    <string name="TransactionTableRewardHeader">Reward\nApplied</string>
+    <string name="PaymentStatusTableDateHeader">Date</string>
+    <string name="PaymentStatusTableTotalHeader">Total\nCharged</string>
+    <string name="PaymentStatusTableGoldHeader">Gold Status\nDiscount</string>
+    <string name="PaymentStatusTableRewardsAppliedHeader">Rewards\nApplied</string>
+    <string name="PaymentStatusTableRewardEarnedHeader">Rewards\nEarned</string>
+    <string name="SaveSuccessful">Save Successful</string>
+    <string name="ErrorDupEmail">Error - Duplicate Email</string>
+    <string name="CustomerSearch">Customer Search</string>
+    <string name="CreateCustomer">Create Customer</string>
+    <string name="CreateTransaction">Create Transaction</string>
+    <string name="ViewAllTransactions">View All Transactions</string>
+    <string name="Transactions">Transactions</string>
+    <string name="title_activity"/>
+
+</resources>

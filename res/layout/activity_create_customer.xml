@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/restaurant"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.gatech.seclass.prj2.CreateCustomerActivity" >
+
+    <TextView
+        android:id="@+id/ccNewCustomerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:text="@string/NewCustomer"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/ccEditFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ccFirstNameLabel"
+        android:layout_toRightOf="@+id/ccFirstNameLabel"
+        android:layout_weight=".8"
+        android:ems="10"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/ccFirstNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ccNewCustomerLabel"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="@string/FirstName" />
+
+    <TextView
+        android:id="@+id/ccLastNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ccEditFirstName"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="@string/LastName" />
+
+    <TextView
+        android:id="@+id/ccEmailAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ccEditLastName"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="@string/EmailAddress" />
+
+    <EditText
+        android:id="@+id/ccEditLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ccLastNameLabel"
+        android:layout_alignBottom="@+id/ccLastNameLabel"
+        android:layout_alignLeft="@+id/ccEditFirstName"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/ccZipcodeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ccEditEmailAddress"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="@string/Zipcode" />
+
+    <EditText
+        android:id="@+id/ccEditZipcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ccZipcodeLabel"
+        android:layout_alignBottom="@+id/ccZipcodeLabel"
+        android:layout_alignLeft="@+id/ccEditEmailAddress"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="5"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/ccSaveCustomer"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccErrorLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:onClick="saveNewCustomer"
+        android:text="@string/Save" />
+
+    <Button
+        android:id="@+id/ccGoHome"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ccSaveCustomer"
+        android:layout_below="@+id/ccSaveCustomer"
+        android:onClick="goHome"
+        android:text="@string/Home" />
+
+    <TextView
+        android:id="@+id/ccErrorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccEditZipcode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/ccEditEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ccEditLastName"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ccEmailAddressLabel"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:padding="10dp" />
+
+</RelativeLayout>

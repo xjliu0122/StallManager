@@ -1,0 +1,220 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/restaurant"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.gatech.seclass.prj2.CreateTransactionActivity" >
+
+    <TextView
+        android:id="@+id/ctTextViewDateLabel"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Date" />
+    
+    <TextView
+        android:id="@+id/ctTextViewDate"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ctAutoCompleteTextViewCustomer"
+        android:layout_alignEnd="@+id/ctAutoCompleteTextViewCustomer"
+        android:layout_alignRight="@+id/ctAutoCompleteTextViewCustomer"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/ctTextViewDateLabel"
+        android:layout_toRightOf="@+id/ctTextViewDateLabel" />
+    
+    <AutoCompleteTextView
+        android:id="@+id/ctAutoCompleteTextViewCustomer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ctTextViewDateLabel"
+        android:layout_alignStart="@+id/ctTextViewDateLabel"
+        android:layout_below="@+id/ctTextViewDateLabel"
+        android:completionThreshold="1"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Search Customers" 
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/ctTextViewSubtotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ctAutoCompleteTextViewCustomer"
+        android:layout_alignStart="@+id/ctAutoCompleteTextViewCustomer"
+        android:layout_below="@+id/ctAutoCompleteTextViewCustomer"
+        android:layout_marginTop="20dp"
+        android:text="Subtotal" />
+
+    <EditText
+        android:id="@+id/ctEditTextSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ctTextViewSubtotalLabel"
+        android:layout_alignBottom="@+id/ctTextViewSubtotalLabel"
+        android:layout_alignRight="@+id/ctAutoCompleteTextViewCustomer"
+        android:layout_alignEnd="@+id/ctAutoCompleteTextViewCustomer"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/ctTextViewDiscountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ctTextViewSubtotalLabel"
+        android:layout_alignStart="@+id/ctTextViewSubtotalLabel"
+        android:layout_below="@+id/ctEditTextSubtotal"
+        android:layout_marginTop="20dp"
+        android:text="Discounts Applied" />
+
+    <TextView
+        android:id="@+id/ctTextViewDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ctTextViewDiscountLabel"
+        android:layout_alignBottom="@+id/ctTextViewDiscountLabel"
+        android:layout_alignRight="@+id/ctEditTextSubtotal"
+        android:layout_alignEnd="@+id/ctEditTextSubtotal"
+        android:text="$0.00" />
+
+    <TextView
+        android:id="@+id/ctTextViewTransactionTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ctTextViewDiscountLabel"
+        android:layout_alignStart="@+id/ctTextViewDiscountLabel"
+        android:layout_alignEnd="@+id/ctEditTextSubtotal"
+        android:layout_alignRight="@+id/ctEditTextSubtotal"
+        android:layout_below="@+id/ctTextViewDiscountLabel"
+        android:layout_marginTop="20dp"
+        android:text="Transaction Total" />
+
+    <TextView
+        android:id="@+id/ctTextViewTransactionTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ctTextViewTransactionTotalLabel"
+        android:layout_alignRight="@+id/ctTextViewDiscount"
+        android:layout_alignEnd="@+id/ctTextViewDiscount"
+        android:text="$0.00" />
+
+    <TextView
+        android:id="@+id/ctTextViewCreditCardLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ctTextViewTransactionTotalLabel"
+        android:layout_alignStart="@+id/ctTextViewTransactionTotalLabel"
+        android:layout_below="@+id/ctTextViewTransactionTotalLabel"
+        android:layout_marginTop="30dp"
+        android:text="Credit Card #" />
+
+    <EditText
+        android:id="@+id/ctEditTextCreditCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ctTextViewCreditCardLabel"
+        android:layout_alignBottom="@+id/ctTextViewCreditCardLabel"
+        android:layout_alignRight="@+id/ctTextViewTransactionTotal"
+        android:layout_alignEnd="@+id/ctTextViewTransactionTotal"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="number" 
+        android:textColor="#000">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/ctTextViewExpirationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ctTextViewCCVLabel"
+        android:layout_alignStart="@+id/ctTextViewCCVLabel"
+        android:layout_below="@+id/ctEditTextCCV"
+        android:layout_marginTop="20dp"
+        android:text="Expiration" />
+
+    <EditText
+        android:id="@+id/ctEditTextCCV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ctEditTextCreditCard"
+        android:layout_alignStart="@+id/ctEditTextCreditCard"
+        android:layout_alignRight="@+id/ctEditTextCreditCard"
+        android:layout_alignEnd="@+id/ctEditTextCreditCard"
+        android:layout_alignTop="@+id/ctTextViewCCVLabel"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="number"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/ctEditTextExpiration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ctTextViewExpirationLabel"
+        android:layout_alignBottom="@+id/ctTextViewExpirationLabel"
+        android:layout_alignLeft="@+id/ctEditTextCCV"
+        android:layout_alignStart="@+id/ctEditTextCCV"
+        android:layout_alignRight="@+id/ctEditTextCCV"
+        android:layout_alignEnd="@+id/ctEditTextCCV"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="date" 
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/ctTextViewCCVLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ctTextViewCreditCardLabel"
+        android:layout_alignStart="@+id/ctTextViewCreditCardLabel"
+        android:layout_below="@+id/ctEditTextCreditCard"
+        android:layout_marginTop="20dp"
+        android:text="CCV" />
+
+    <TextView
+        android:id="@+id/ctErrorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ctEditTextExpiration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="" />
+
+    <Button
+        android:id="@+id/ctButtonProcessPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Process \nPayment" 
+        android:onClick="processTransactions"/>
+
+    <Button
+        android:id="@+id/ctHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ctButtonSwipeCard"
+        android:layout_alignTop="@+id/ctButtonSwipeCard"
+        android:layout_toLeftOf="@+id/ctButtonSwipeCard"
+        android:onClick="goHome"
+        android:text="Home" />
+
+    <Button
+        android:id="@+id/ctButtonSwipeCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ctButtonProcessPayment"
+        android:layout_alignTop="@+id/ctButtonProcessPayment"
+        android:layout_toLeftOf="@+id/ctButtonProcessPayment"
+        android:onClick="swipe"
+        android:text="Swipe \nCard" />
+  
+</RelativeLayout>

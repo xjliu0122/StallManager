@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/restaurant"
+    android:orientation="vertical"
+    tools:context="edu.gatech.seclass.prj2.SearchCustomerActivity" >
+
+     <TextView
+        android:id="@+id/sc_frameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Customer"
+        android:layout_centerHorizontal="true"
+        android:textSize="32sp"/>
+        <requestFocus />
+      
+        
+    <LinearLayout
+        android:id="@+id/sc_instId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sc_frameTitle">
+     <TextView
+        android:id="@+id/sc_instructionLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter full/partial data in any or all fields."
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_weight="1" > 
+     </TextView>  
+     </LinearLayout>        
+    <TableLayout
+        android:id="@+id/sc_tableId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sc_instId"
+        android:stretchColumns="1">     
+     <TableRow>            
+     <TextView
+        android:id="@+id/sc_firstNameLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        android:textSize="16sp"
+        android:gravity="left"
+        android:hint="first name"
+        android:layout_weight="0.25" > 
+     </TextView>          
+    <EditText
+        android:id="@+id/sc_firstName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter part of a name"
+        android:layout_weight="1" >
+    </EditText>
+   </TableRow>
+        <TableRow>
+     <TextView
+        android:id="@+id/sc_lastNameLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        android:textSize="16sp"
+        android:gravity="left"
+        android:layout_weight="0.25" >           
+     </TextView>          
+         <EditText
+        android:id="@+id/sc_lastName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter part of a name"
+        android:layout_weight="1" >   
+    </EditText>
+        
+   </TableRow>  
+        <TableRow>
+     <TextView
+        android:id="@+id/sc_zipCodeLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Zip Code"
+        android:textSize="16sp"
+        android:gravity="left"
+        android:layout_weight="0.25" >           
+     </TextView>          
+         <EditText
+        android:id="@+id/sc_zipCode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter full or partial zip"
+        android:layout_weight="1" >     
+    </EditText>
+        
+   </TableRow>    
+        <TableRow>
+     <TextView
+        android:id="@+id/sc_emailAddrLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Email Address"
+        android:textSize="16sp"
+        android:gravity="left"
+        android:layout_weight="0.25" >           
+     </TextView>          
+         <EditText
+        android:id="@+id/sc_emailAddr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter part of a email"
+        android:layout_weight="1" >   
+     </EditText>
+        
+   </TableRow>
+   </TableLayout>
+  
+            <TableLayout
+        android:id="@+id/sc_searchTable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sc_tableId">
+        <TableRow>
+    <Button
+        android:id="@+id/sc_searchButton"
+        android:text="SEARCH" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" 
+        android:textSize="32sp"
+        android:onClick="handleSearchClick" />
+  
+   </TableRow>
+   </TableLayout>
+
+</RelativeLayout>
